@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import {Component} from "react/cjs/react.production.min";
+import {Fragment} from "react";
+import SearchBook from "./components/SearchBook";
+import {BrowserRouter, Route} from "react-router-dom";
+import Home from "./components/Home";
+import Header from "./partial_components/Header";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component{
+
+    render() {
+        return (
+            <Fragment>
+                <BrowserRouter>
+                    <Header></Header>
+                    {/*<Home/>*/}
+                    <Route path={'/'} exact component={Home}></Route>
+                    <Route path={'/book/search'} component={SearchBook}></Route>
+                </BrowserRouter>
+            </Fragment>
+        );
+    }
 }
 
 export default App;
