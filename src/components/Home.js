@@ -5,6 +5,7 @@ import {Link} from "react-router-dom";
 import {FaSearch} from "react-icons/all";
 
 class Home extends Component{
+
     render() {
         return(
             <Container>
@@ -18,9 +19,9 @@ class Home extends Component{
                     </Col>
                 </Row>
                 <p className={'text-center mb-0'}>Bicol University Gubat Campus</p>
-                <p className={'text-center'}><b>LIBRARY</b></p>
+                <h3 className={'text-center'}><b>E</b> - LIBRARY</h3>
                 <Row>
-                    <Col className={'text-center'}>
+                    <Col className={'text-center mt-5'}>
                         <Button as={Link} to={'/book/search'} variant={"outline-secondary"} className={'center-text'} size={'lg'}><FaSearch/>  SEARCH BOOKS</Button>
                     </Col>
                 </Row>
