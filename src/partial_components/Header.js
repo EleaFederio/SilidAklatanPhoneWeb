@@ -3,6 +3,20 @@ import {Nav, Navbar} from "react-bootstrap";
 import {Link} from "react-router-dom";
 
 class Header extends Component{
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            navWindow: false
+        }
+    }
+
+    toggleNavBar = () => {
+        this.setState({
+            navWindow: this.state.navWindow ? false : "expanded"
+        })
+    }
+
     render() {
         return (
             <Navbar collapseOnSelect expand="lg" fixed={'top'} bg="dark" variant="dark">

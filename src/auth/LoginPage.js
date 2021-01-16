@@ -1,6 +1,7 @@
 import {Component} from "react";
 import {Button, Card, Col, Container, Form, FormControl, FormGroup, Image, Row} from "react-bootstrap";
 import BugcLogo from '../images/bugcTransparentLogo.png';
+import axios from "axios";
 
 class LoginPage extends Component{
 
@@ -15,7 +16,14 @@ class LoginPage extends Component{
 
     handleAuthentication = (e) => {
         e.preventDefault();
-        console.log('Auth Function')
+        const data = {studentId: this.state.studentId, password: this.state.password}
+        axios.get("http://bugc-library.herokuapp.com/api/login", data)
+            .then((response) => {
+                console.log(response)
+            })
+            .catch((error) => {
+                console.log(error)
+            })
     }
 
     handleInput = (e) => {
