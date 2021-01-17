@@ -2,7 +2,7 @@
   "name": "silid_aklatan_phone_web_app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://bugc-library.herokuapp.com/api",
+  "proxy": "https://bugc-library.herokuapp.com/api",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.8",
     "@testing-library/react": "^11.2.3",
