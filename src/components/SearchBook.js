@@ -12,7 +12,7 @@ class SearchBook extends Component{
             searchField: {
                 title: ''
             },
-            currentURL: 'http://bugc-library.herokuapp.com/api/books/search',
+            currentURL: '/books/search',
             data: [],
             totalResult: 0,
             currentPage: 0,
