@@ -1,5 +1,5 @@
-import {Button, Container, Form, FormControl, InputGroup, Jumbotron} from "react-bootstrap";
-import axios from "axios";
+import {Button, Container, Form, FormControl, InputGroup, Jumbotron, Row} from "react-bootstrap";
+import {axios} from '../lib/axios'
 import BookList from "./BookList";
 const {Component} = require("react");
 
@@ -118,17 +118,17 @@ class SearchBook extends Component{
                     this.state.displayNoResult === true || this.state.noMatch ? (<Jumbotron><h3>No Result</h3></Jumbotron>) : null
                 }
 
-                {
-                    booksDataExist && this.state.data.map((bookData) => (
-                        <BookList key={bookData.id} title={bookData.title} author={bookData.author} publisher={bookData.publisher} year={bookData.year} pages={bookData.pages} />
-                    ))
-                }
+                <Row>
+                    {
+                        booksDataExist && this.state.data.map((bookData) => (
+                            <BookList key={bookData.id} title={bookData.title} author={bookData.author} publisher={bookData.publisher} year={bookData.year} pages={bookData.pages} />
+                        ))
+                    }
+                </Row>
 
                 {
                     this.state.data.length === 0 ? null : (<Button disabled={!this.state.nextPageUrl } size={'sm'} variant={'secondary'} onClick={this.showMore}>{this.state.nextPageUrl === null ? 'Nothing Follows' : 'Show More'}</Button>)
                 }
-
-
             </Container>
         )
     }

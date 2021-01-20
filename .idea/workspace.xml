@@ -4,7 +4,10 @@
     <list default="true" id="c30eddb1-2c09-4495-8780-8216c7d9e1ac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/auth/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/LoginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BookList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SearchBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchBook.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/axios.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +74,8 @@
       <workItem from="1610722010905" duration="1419000" />
       <workItem from="1610810878431" duration="2434000" />
       <workItem from="1610887322286" duration="128000" />
-      <workItem from="1610891826764" duration="1520000" />
+      <workItem from="1610891826764" duration="5264000" />
+      <workItem from="1611147442051" duration="9763000" />
     </task>
     <servers />
   </component>
