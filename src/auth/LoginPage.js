@@ -17,7 +17,7 @@ class LoginPage extends Component{
     handleAuthentication = (e) => {
         e.preventDefault();
         const data = {studentId: this.state.studentId, password: this.state.password}
-        axios.get("http://bugc-library.herokuapp.com/api/login", data)
+        axios.get("https://bugc-library.herokuapp.com/api/login", data)
             .then((response) => {
                 console.log(response)
             })
