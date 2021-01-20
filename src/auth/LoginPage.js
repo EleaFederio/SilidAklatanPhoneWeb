@@ -16,7 +16,6 @@ class LoginPage extends Component{
 
     handleAuthentication = (e) => {
         e.preventDefault();
-<<<<<<< HEAD
         axios.defaults.withCredentials = true;
 
         const userData= {student_id: this.state.studentId, password: this.state.password}
@@ -27,7 +26,7 @@ class LoginPage extends Component{
             console.log(userData);
             axios.post('http://127.0.0.1:8000/api/login', userData).then(res => {
                 console.log(res.data)
-                
+
             });
         })
 
@@ -45,16 +44,6 @@ class LoginPage extends Component{
         // }).then(response => {
         //     console.log(response)
         // });
-=======
-        const data = {studentId: this.state.studentId, password: this.state.password}
-        axios.get("https://bugc-library.herokuapp.com/api/login", data)
-            .then((response) => {
-                console.log(response)
-            })
-            .catch((error) => {
-                console.log(error)
-            })
->>>>>>> 6bb0f25012e6c22953da69fbca5902b1d2e47976
     }
 
     handleInput = (e) => {
