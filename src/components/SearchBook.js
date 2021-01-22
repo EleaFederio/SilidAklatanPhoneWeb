@@ -96,7 +96,7 @@ class SearchBook extends Component{
         const searchPhrase = this.state.searchField.title;
         return(
             <Container className={'mt-4 mb-4'} >
-                <Form onSubmit={this.searchBookHandler} style={{marginTop: '15vh'}}>
+                <Form onSubmit={this.searchBookHandler} style={{marginTop: '8vh'}}>
                     <InputGroup className="mb-3">
                         <FormControl
                             placeholder="Enter Book Title..."

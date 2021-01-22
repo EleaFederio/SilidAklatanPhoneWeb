@@ -1,6 +1,13 @@
-.custom-control{
+body {
+  padding: 50px 0 0 0;
+  background-color: red;
+}
+.custom-control {
   padding: 0;
 }
-.custom-switch{
+.custom-switch {
   padding: 0;
+}
+.navbar {
+  background: #20558b !important;
 }

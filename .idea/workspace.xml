@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c30eddb1-2c09-4495-8780-8216c7d9e1ac" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/AboutPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/GuidelinesPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MyAccount.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/AuthRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/GuestRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/auth/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/LoginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BookList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SearchBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchBook.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/partial_components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/partial_components/Header.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +84,9 @@
       <workItem from="1610810878431" duration="2434000" />
       <workItem from="1610887322286" duration="128000" />
       <workItem from="1610891826764" duration="5264000" />
-      <workItem from="1611147442051" duration="10411000" />
+      <workItem from="1611147442051" duration="11217000" />
+      <workItem from="1611312265080" duration="332000" />
+      <workItem from="1611327649256" duration="6332000" />
     </task>
     <servers />
   </component>

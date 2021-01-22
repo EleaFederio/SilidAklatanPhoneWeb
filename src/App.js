@@ -6,6 +6,11 @@ import {BrowserRouter, Route} from "react-router-dom";
 import Home from "./components/Home";
 import Header from "./partial_components/Header";
 import LoginPage from "./auth/LoginPage";
+import MyAccount from "./components/MyAccount";
+import GuidelinesPage from "./components/GuidelinesPage";
+import AboutPage from "./components/AboutPage";
+import GuestRoute from "./lib/GuestRoute";
+import AuthRoute from "./lib/AuthRoute";
 
 
 class App extends Component{
@@ -14,11 +19,14 @@ class App extends Component{
         return (
             <Fragment>
                 <BrowserRouter>
-                    <Header></Header>
+                    <Header />
                     {/*<Home/>*/}
                     <Route path={'/'} exact component={Home}></Route>
                     <Route path={'/book/search'} component={SearchBook}></Route>
-                    <Route path={'/login'} exact strict component={LoginPage}/>
+                    <Route path={'/guidelines'} exact component={GuidelinesPage} />
+                    <Route path={'/about'} exact component={AboutPage} />
+                    <GuestRoute path={'/login'} exact strict component={LoginPage}/>
+                    <AuthRoute path={'/account'} exact strict component={MyAccount} />
                 </BrowserRouter>
             </Fragment>
         );

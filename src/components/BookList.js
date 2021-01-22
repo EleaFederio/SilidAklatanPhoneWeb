@@ -1,4 +1,4 @@
-import {Button, Card, Col, Image, Row} from "react-bootstrap";
+import {Button, Card, Col} from "react-bootstrap";
 
 const {Component} = require("react");
 
