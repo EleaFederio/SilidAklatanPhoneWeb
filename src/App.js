@@ -1,6 +1,5 @@
 import './App.css';
 import {Component} from "react/cjs/react.production.min";
-import {Fragment} from "react";
 import SearchBook from "./components/SearchBook";
 import {BrowserRouter, Route} from "react-router-dom";
 import Home from "./components/Home";
@@ -17,18 +16,16 @@ class App extends Component{
 
     render() {
         return (
-            <Fragment>
-                <BrowserRouter>
-                    <Header />
-                    {/*<Home/>*/}
-                    <Route path={'/'} exact component={Home}></Route>
-                    <Route path={'/book/search'} component={SearchBook}></Route>
-                    <Route path={'/guidelines'} exact component={GuidelinesPage} />
-                    <Route path={'/about'} exact component={AboutPage} />
-                    <GuestRoute path={'/login'} exact strict component={LoginPage}/>
-                    <AuthRoute path={'/account'} exact strict component={MyAccount} />
-                </BrowserRouter>
-            </Fragment>
+            <BrowserRouter>
+                <Header />
+                {/*<Home/>*/}
+                <Route path={'/'} exact component={Home}></Route>
+                <Route path={'/book/search'} component={SearchBook}></Route>
+                <Route path={'/guidelines'} exact component={GuidelinesPage} />
+                <Route path={'/about'} exact component={AboutPage} />
+                <GuestRoute path={'/login'} exact strict component={LoginPage}/>
+                <AuthRoute path={'/account'} exact strict component={MyAccount} />
+            </BrowserRouter>
         );
     }
 }

@@ -3,6 +3,7 @@ import {Button, Card, Col, Container, Form, FormControl, FormGroup, Image, Row} 
 import BugcLogo from '../images/bugcTransparentLogo.png';
 import {axios} from "../lib/axios";
 import cookie from 'js-cookie';
+import connect from "react-redux/lib/connect/connect";
 
 class LoginPage extends Component{
 
@@ -17,26 +18,25 @@ class LoginPage extends Component{
 
     handleAuthentication = (e) => {
         e.preventDefault();
-        console.log('Auth')
-        this.props.history.push('/account');
-        console.log('Auth Again')
-        // axios.defaults.withCredentials = true;
-        //
-        // const userData= {student_id: this.state.studentId, password: this.state.password}
-        // console.log(userData);
-        //
-        // axios.get("http://127.0.0.1:8000/sanctum/csrf-cookie").then(response => {
-        //     console.log(response);
-        //     console.log(userData);
-        //     axios.post('http://127.0.0.1:8000/api/login', userData).then(res => {
-        //         console.log(res.data)
-        //         cookie.set('token', res.data.token);
-        //         cookie.set('student', res.data.student);
-        //         console.log(this.props.history);
-        //         this.props.history.push('/account');
-        //         console.log(this.props.history);
-        //     });
-        // })
+        // console.log('Auth')
+        // this.props.history.push('/account');
+        // console.log('Auth Again')
+        axios.defaults.withCredentials = true;
+
+        const userData= {student_id: this.state.studentId, password: this.state.password}
+        console.log(userData);
+
+        axios.get("http://127.0.0.1:8000/sanctum/csrf-cookie").then(response => {
+            console.log(response);
+            console.log(userData);
+            axios.post('http://127.0.0.1:8000/api/login', userData).then(res => {
+                console.log(res.data)
+                cookie.set('token', res.data.token);
+                // set mapDispatchToProps->setLogin
+                this.props.setLogin(res.data.student)
+                this.props.history.push('/account');
+            });
+        })
     }
 
     handleInput = (e) => {
@@ -88,4 +88,15 @@ class LoginPage extends Component{
 
 }
 
-export default LoginPage;
+// This setLogin payload is set when the user login correctly
+// See the loginHandler axios call
+const mapDispatchToProps = dispatch => {
+    return {
+        setLogin: (student) => dispatch({
+            type: "SET_LOGIN",
+            payload: student
+        })
+    }
+}
+
+export default connect(null, mapDispatchToProps)(LoginPage);
