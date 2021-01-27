@@ -1,7 +1,11 @@
 const  AuthReducer = (state = {}, actions) => {
     switch (actions.type){
-        case 'value':
-            return state
+        case 'SET_LOGIN':
+            return {
+                ...state,
+                loggedIn: true,
+                student: actions.payload
+            }
         default:
             return state
     }
