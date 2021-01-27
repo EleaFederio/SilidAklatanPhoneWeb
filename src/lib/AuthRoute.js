@@ -1,17 +1,15 @@
-import cookie from 'js-cookie';
 import React from 'react';
 import { Redirect, Route } from "react-router-dom";
+import {connect} from "react-redux";
 
 function AuthRoute ({ component: Component, ...rest }){
-
-    const token = cookie.get('token');
 
     return(
         <Route
             {...rest}
             render={props =>
                 // if there is token redirect to account route
-                token ? (
+                rest.loggedIn ? (
                     <Component {...props} />
                 ) : (
                     <Redirect
@@ -27,4 +25,9 @@ function AuthRoute ({ component: Component, ...rest }){
     )
 }
 
-export default AuthRoute;
+const mapStateToProps = state => {
+    return {
+        loggedIn: state.auth.loggedIn
+    }
+}
+export default connect(mapStateToProps)(AuthRoute);

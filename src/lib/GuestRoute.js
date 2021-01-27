@@ -1,17 +1,15 @@
-import cookie from 'js-cookie';
 import React from 'react';
 import { Redirect, Route } from "react-router-dom";
+import {connect} from "react-redux";
 
 function GuestRoute ({ component: Component, ...rest }){
-
-    const token = cookie.get('token');
 
     return(
         <Route
             {...rest}
             render={props =>
                 // if there is token redirect to account
-                !token ? (
+                !rest.loggedIn ? (
                     <Component {...props} />
                 ) : (
                     <Redirect
@@ -27,4 +25,10 @@ function GuestRoute ({ component: Component, ...rest }){
     )
 }
 
-export default GuestRoute;
+const mapStateToProps = state => {
+    return {
+        loggedIn: state.auth.loggedIn
+    }
+}
+
+export default connect(mapStateToProps)(GuestRoute);

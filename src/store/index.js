@@ -13,7 +13,8 @@ const initialStates = {
 
 const store = createStore(
     AllReducers,
-    initialStates
+    initialStates,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
 export default store;

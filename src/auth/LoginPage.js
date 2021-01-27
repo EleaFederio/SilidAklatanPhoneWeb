@@ -3,7 +3,8 @@ import {Button, Card, Col, Container, Form, FormControl, FormGroup, Image, Row} 
 import BugcLogo from '../images/bugcTransparentLogo.png';
 import {axios} from "../lib/axios";
 import cookie from 'js-cookie';
-import connect from "react-redux/lib/connect/connect";
+import {connect} from "react-redux";
+
 
 class LoginPage extends Component{
 
