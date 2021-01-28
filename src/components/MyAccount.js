@@ -1,8 +1,16 @@
 import { Component, Fragment } from "react";
 import {Button} from "react-bootstrap";
-import {Link} from "react-router-dom";
+import cookie from 'js-cookie';
+import {connect} from "react-redux";
+import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
 
 class MyAccount extends Component{
+
+    handleLogout = (e) => {
+        e.preventDefault();
+        cookie.remove('token');
+        this.props.logout();
+    }
 
     render(){
         return(
@@ -74,7 +82,7 @@ class MyAccount extends Component{
                                         <div className={'row'}>
                                             <div className={'col-sm-12'}>
                                                 <h6 className={'mb-0'}>Full Name</h6>
-                                                <Button as={Link} to={'/logout'} size={'sm'} variant={'danger'}>LOGOUT</Button>
+                                                <Button onClick={this.handleLogout} size={'sm'} variant={'danger'}>LOGOUT</Button>
                                             </div>
                                         </div>
                                     </div>
@@ -91,4 +99,12 @@ class MyAccount extends Component{
     }
 }
 
-export default MyAccount;
+const mapDispatchToPops = dispatch => {
+    return{
+        logout: () => dispatch({
+            type: 'SET_LOGOUT'
+        })
+    }
+}
+
+export default connect(null, mapDispatchToPops)(MyAccount);
