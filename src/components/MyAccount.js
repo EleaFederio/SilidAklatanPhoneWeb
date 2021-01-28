@@ -1,4 +1,6 @@
 import { Component, Fragment } from "react";
+import {Button} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 class MyAccount extends Component{
 
@@ -72,6 +74,7 @@ class MyAccount extends Component{
                                         <div className={'row'}>
                                             <div className={'col-sm-12'}>
                                                 <h6 className={'mb-0'}>Full Name</h6>
+                                                <Button as={Link} to={'/logout'} size={'sm'} variant={'danger'}>LOGOUT</Button>
                                             </div>
                                         </div>
                                     </div>

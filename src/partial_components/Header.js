@@ -1,6 +1,7 @@
 import {Component} from "react";
-import {Nav, Navbar} from "react-bootstrap";
+import {Nav, Navbar, NavDropdown} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import {connect} from "react-redux";
 
 class Header extends Component{
 
@@ -24,6 +25,19 @@ class Header extends Component{
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
+                        {
+                            this.props.loggedIn ?
+                                (
+                                    <>
+                                        <Nav.Link as={Link} to={'/account'}>QR Login</Nav.Link>
+                                        <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+                                            <NavDropdown.Item href="#action/3.1">Request a Book</NavDropdown.Item>
+                                            <NavDropdown.Item href="#action/3.2">Library Evaluation</NavDropdown.Item>
+                                        </NavDropdown>
+                                    </>
+                                ) :
+                                ( null )
+                        }
                         <Nav.Link as={Link} to={'/guidelines'}>Guidelines</Nav.Link>
                         <Nav.Link as={Link} to={'/about'}>About</Nav.Link>
                         {/*<NavDropdown title="Dropdown" id="collasible-nav-dropdown">*/}
@@ -35,8 +49,13 @@ class Header extends Component{
                         {/*</NavDropdown>*/}
                     </Nav>
                     <Nav>
-                        <Nav.Link as={Link} to={'/account'}>ACCOUNT</Nav.Link>
-                        <Nav.Link as={Link} to={'/login'}>LOGIN</Nav.Link>
+                        {
+                            this.props.loggedIn ?
+                                ( <Nav.Link as={Link} to={'/account'}>ACCOUNT</Nav.Link> ) :
+                                ( <Nav.Link as={Link} to={'/login'}>LOGIN</Nav.Link> )
+                        }
+                        {/*<Nav.Link as={Link} to={'/account'}>ACCOUNT</Nav.Link>*/}
+                        {/*<Nav.Link as={Link} to={'/login'}>LOGIN</Nav.Link>*/}
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
@@ -44,4 +63,10 @@ class Header extends Component{
     }
 }
 
-export default Header;
+const mapStateToProps = state => {
+    return{
+        loggedIn: state.auth.loggedIn
+    }
+}
+
+export default connect(mapStateToProps)(Header);
