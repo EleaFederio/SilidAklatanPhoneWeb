@@ -11,3 +11,6 @@ body {
 .navbar {
   background: #20558b !important;
 }
+.img-thumbnail{
+  background-color:transparent
+}
