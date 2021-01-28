@@ -6,6 +6,10 @@ import {FaSearch} from "react-icons/all";
 
 class Home extends Component{
 
+    componentDidMount() {
+        document.title = "BUGC e-Lib - Home"
+    }
+
     render() {
         return(
             <Container>

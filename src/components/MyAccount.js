@@ -6,6 +6,10 @@ import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
 
 class MyAccount extends Component{
 
+    componentDidMount() {
+        document.title = "BUGC e-Lib - My Account"
+    }
+
     handleLogout = (e) => {
         e.preventDefault();
         cookie.remove('token');

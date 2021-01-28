@@ -24,6 +24,10 @@ class SearchBook extends Component{
         }
     }
 
+    componentDidMount() {
+        document.title = "BUGC e-Lib - Book Search"
+    }
+
     searchBookHandler = (e) => {
         e.preventDefault();
         this.searchABook()

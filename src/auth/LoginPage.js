@@ -17,6 +17,10 @@ class LoginPage extends Component{
         }
     }
 
+    componentDidMount() {
+        document.title = "BUGC e-Lib - Login"
+    }
+
     handleAuthentication = (e) => {
         e.preventDefault();
         // console.log('Auth')

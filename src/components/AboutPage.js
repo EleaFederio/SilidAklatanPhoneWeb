@@ -3,6 +3,10 @@ import {Container} from "react-bootstrap";
 
 class AboutPage extends Component{
 
+    componentDidMount() {
+        document.title = "BUGC e-Lib - About"
+    }
+
     render() {
         return (
             <Fragment>
