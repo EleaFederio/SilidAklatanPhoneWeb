@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c30eddb1-2c09-4495-8780-8216c7d9e1ac" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/QrCodeScannerPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/auth/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/LoginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AboutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GuidelinesPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GuidelinesPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MyAccount.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyAccount.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchBook.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/partial_components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/partial_components/Header.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +39,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -87,7 +89,9 @@
       <workItem from="1611493120405" duration="142000" />
       <workItem from="1611667779637" duration="5801000" />
       <workItem from="1611761639951" duration="6864000" />
-      <workItem from="1611840625329" duration="7971000" />
+      <workItem from="1611840625329" duration="8331000" />
+      <workItem from="1611932217792" duration="1805000" />
+      <workItem from="1611934775824" duration="3451000" />
     </task>
     <servers />
   </component>

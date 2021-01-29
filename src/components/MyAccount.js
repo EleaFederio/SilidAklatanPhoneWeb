@@ -2,9 +2,16 @@ import { Component, Fragment } from "react";
 import {Button} from "react-bootstrap";
 import cookie from 'js-cookie';
 import {connect} from "react-redux";
-import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
+
 
 class MyAccount extends Component{
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            qrCode: ''
+        }
+    }
 
     componentDidMount() {
         document.title = "BUGC e-Lib - My Account"
@@ -33,8 +40,8 @@ class MyAccount extends Component{
                                         <div className={'d-flex flex-column align-items-center text-center'}>
                                             <img src={'https://bootdey.com/img/Content/avatar/avatar7.png'} alt={'Admin'} className={'rounded-circle'} width={'150'} />
                                             <div className={'mt-3'}>
-                                                <h4>Full Name</h4>
-                                                <p className="text-secondary mb-1">09351429901</p>
+                                                <h4>{this.props.student.firstname} {this.props.student.middlename.substring(0,1)}. {this.props.student.lastname}</h4>
+                                                <p className="text-secondary mb-1">{this.props.student.phone}</p>
                                                 <p className="text-muted font-size-sm">Bonifacio Street, Gubat, Sorosogon</p>
                                             </div>
                                         </div>
@@ -47,19 +54,19 @@ class MyAccount extends Component{
                                             <h6 className="mb-0">
                                                 Email:
                                             </h6>
-                                            <span className="text-secondary">https://bootdey.com</span>
+                                            <span className="text-secondary">{this.props.student.email}</span>
                                         </li>
                                         <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                                             <h6 className="mb-0">
                                                 Student ID:
                                             </h6>
-                                            <span className="text-secondary">bootdey</span>
+                                            <span className="text-secondary">{this.props.student.student_id}</span>
                                         </li>
                                         <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                                             <h6 className="mb-0">
                                                 Course/Year:
                                             </h6>
-                                            <span className="text-secondary">@bootdey</span>
+                                            <span className="text-secondary">{this.props.student.course} - {this.props.student.year}</span>
                                         </li>
                                         <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                                             <h6 className="mb-0">
@@ -103,6 +110,12 @@ class MyAccount extends Component{
     }
 }
 
+const mapStateToProps = (state) => {
+    return {
+        student: state.auth.student
+    }
+}
+
 const mapDispatchToPops = dispatch => {
     return{
         logout: () => dispatch({
@@ -111,4 +124,4 @@ const mapDispatchToPops = dispatch => {
     }
 }
 
-export default connect(null, mapDispatchToPops)(MyAccount);
+export default connect(mapStateToProps, mapDispatchToPops)(MyAccount);

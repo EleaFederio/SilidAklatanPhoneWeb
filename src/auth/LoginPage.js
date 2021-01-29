@@ -34,13 +34,17 @@ class LoginPage extends Component{
         axios.get("http://127.0.0.1:8000/sanctum/csrf-cookie").then(response => {
             console.log(response);
             console.log(userData);
-            axios.post('http://127.0.0.1:8000/api/login', userData).then(res => {
-                console.log(res.data)
-                cookie.set('token', res.data.token);
-                // set mapDispatchToProps->setLogin
-                this.props.setLogin(res.data.student)
-                this.props.history.push('/account');
-            });
+            axios.post('http://127.0.0.1:8000/api/login', userData)
+                .then(res => {
+                    console.log(res.data)
+                    cookie.set('token', res.data.token);
+                    // set mapDispatchToProps->setLogin
+                    this.props.setLogin(res.data.student)
+                    this.props.history.push('/account');
+                })
+                .catch(error => {
+                    console.log(error)
+                });
         })
     }
 
