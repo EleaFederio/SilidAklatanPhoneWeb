@@ -10,7 +10,6 @@ import GuidelinesPage from "./components/GuidelinesPage";
 import AboutPage from "./components/AboutPage";
 import GuestRoute from "./lib/GuestRoute";
 import AuthRoute from "./lib/AuthRoute";
-import QrCodeScannerPage from "./components/QrCodeScannerPage";
 
 
 class App extends Component{
@@ -22,7 +21,7 @@ class App extends Component{
                 {/*<Home/>*/}
                 <Route path={'/'} exact component={Home}></Route>
                 <Route path={'/book/search'} component={SearchBook}></Route>
-                <Route path={'/qr_scanner'} component={QrCodeScannerPage}></Route>
+                {/*<Route path={'/qr_scanner'} component={QrCodeScannerPage}></Route>*/}
                 <Route path={'/guidelines'} exact component={GuidelinesPage} />
                 <Route path={'/about'} exact component={AboutPage} />
                 <GuestRoute path={'/login'} exact strict component={LoginPage}/>

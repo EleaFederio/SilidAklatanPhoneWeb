@@ -1,4 +1,4 @@
-import axios from 'axios';
+import {axios} from './lib/axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import cookie from 'js-cookie';
 import React from 'react';
@@ -27,7 +27,7 @@ const render = () => {
 
 if(token){
     // this is to check if token is valid then return the user who owns the token
-    axios.get('http://127.0.0.1:8000/api/student').then(res => {
+    axios.get('/api/student').then(res => {
         // console.log(res.data)
         store.dispatch({
             // payload is dispatch to set the state in redux

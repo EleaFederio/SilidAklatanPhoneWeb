@@ -31,10 +31,11 @@ class LoginPage extends Component{
         const userData= {student_id: this.state.studentId, password: this.state.password}
         console.log(userData);
 
-        axios.get("http://127.0.0.1:8000/sanctum/csrf-cookie").then(response => {
+        // Edit this when it is deploy in the server
+        axios.get("/sanctum/csrf-cookie").then(response => {
             console.log(response);
             console.log(userData);
-            axios.post('http://127.0.0.1:8000/api/login', userData)
+            axios.post('api/login', userData)
                 .then(res => {
                     console.log(res.data)
                     cookie.set('token', res.data.token);

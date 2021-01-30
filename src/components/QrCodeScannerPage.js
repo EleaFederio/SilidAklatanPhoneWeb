@@ -8,6 +8,8 @@ class QrCodeScannerPage extends Component{
         this.state = {
             qrCode: ''
         }
+
+        this.scanQrCode = this.scanQrCode.bind(this)
     }
 
     scanQrCode = data => {
@@ -23,13 +25,19 @@ class QrCodeScannerPage extends Component{
     }
 
     render() {
+
+        const previewStyle = {
+            height: 240,
+            width: 320,
+        }
+
         return(
             <Container>
                 <QrReader>
                     delay={300}
+                    style={previewStyle}
                     onError={this.handleError}
                     onScan={this.handleScan}
-                    style={{ width: '100%' }}
                 </QrReader>
                 <p>{this.state.result}</p>
             </Container>

@@ -12,7 +12,7 @@ class SearchBook extends Component{
             searchField: {
                 title: ''
             },
-            currentURL: '/books/search',
+            currentURL: 'api/books/search',
             data: [],
             totalResult: 0,
             currentPage: 0,

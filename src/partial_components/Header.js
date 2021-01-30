@@ -29,7 +29,7 @@ class Header extends Component{
                             this.props.loggedIn ?
                                 (
                                     <>
-                                        <Nav.Link as={Link} to={'/qr_scanner'}>QR Login</Nav.Link>
+                                        {/*<Nav.Link as={Link} to={'/qr_scanner'}>QR Login</Nav.Link>*/}
                                         <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
                                             <NavDropdown.Item href="#action/3.1">Request a Book</NavDropdown.Item>
                                             <NavDropdown.Item href="#action/3.2">Library Evaluation</NavDropdown.Item>
