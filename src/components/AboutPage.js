@@ -1,5 +1,6 @@
 import { Component, Fragment } from "react";
 import {Container} from "react-bootstrap";
+import Footer from "./Footer";
 
 class AboutPage extends Component{
 
@@ -13,6 +14,7 @@ class AboutPage extends Component{
                 <Container>
                     <h3>About</h3>
                 </Container>
+                <Footer/>
             </Fragment>
         );
     }

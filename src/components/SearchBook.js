@@ -101,6 +101,11 @@ class SearchBook extends Component{
         return(
             <Container className={'mt-4 mb-4'} >
                 <Form onSubmit={this.searchBookHandler} style={{marginTop: '8vh'}}>
+                    <span>
+                        <small>
+                            if server is in sleep mode, book search may take 2-3mins
+                        </small>
+                    </span>
                     <InputGroup className="mb-3">
                         <FormControl
                             placeholder="Enter Book Title..."

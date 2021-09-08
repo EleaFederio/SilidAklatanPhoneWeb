@@ -1,5 +1,6 @@
 import { Component, Fragment } from "react";
 import {Container} from "react-bootstrap";
+import Footer from "./Footer";
 
 class GuidelinesPage extends Component{
 
@@ -9,11 +10,14 @@ class GuidelinesPage extends Component{
 
     render(){
         return(
-            <Fragment>
-                <Container>
-                    <h3>Guidelines</h3>
-                </Container>
-            </Fragment>
+            <>
+                <Fragment>
+                    <Container>
+                        <h3>Guidelines</h3>
+                    </Container>
+                </Fragment>
+                <Footer></Footer>
+            </>
         )
     }
 
