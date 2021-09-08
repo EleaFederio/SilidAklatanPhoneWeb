@@ -11,7 +11,7 @@ class AboutPage extends Component{
     render() {
         return (
             <Fragment>
-                <Container>
+                <Container style={{marginTop: '3vh'}}>
                     <h3>About</h3>
                 </Container>
                 <Footer/>

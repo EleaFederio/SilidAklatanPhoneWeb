@@ -12,7 +12,7 @@ class GuidelinesPage extends Component{
         return(
             <>
                 <Fragment>
-                    <Container>
+                    <Container style={{marginTop: '3vh'}}>
                         <h3>Guidelines</h3>
                     </Container>
                 </Fragment>

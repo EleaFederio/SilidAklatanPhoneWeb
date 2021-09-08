@@ -25,7 +25,7 @@ class BookList extends Component{
                             </Row>
                         </Container>
                     </Card.Body>
-                    <Button variant={'info'}>Borrow</Button>
+                    <Button variant={'info'} disabled>Borrow</Button>
                 </Card>
             </Col>
         );

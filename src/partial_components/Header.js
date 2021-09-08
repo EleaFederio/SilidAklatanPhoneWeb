@@ -8,21 +8,23 @@ class Header extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            navWindow: false
+            navWindow: false,
         }
     }
 
+    //Close the navbar after an nav is clicked
     toggleNavBar = () => {
         this.setState({
-            navWindow: this.state.navWindow ? false : "expanded"
+            navWindow: this.state.navWindow ? false : true
         })
+        // console.log(this.state.navWindow)
     }
 
     render() {
         return (
-            <Navbar collapseOnSelect expand="lg" fixed={'top'} variant="dark">
+            <Navbar collapseOnSelect expand="lg" expanded={this.state.navWindow} fixed={'top'} variant="dark">
                 <Navbar.Brand as={Link} to={'/'} >BUGC Library</Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={this.toggleNavBar} />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
                         {
@@ -38,24 +40,15 @@ class Header extends Component{
                                 ) :
                                 ( null )
                         }
-                        <Nav.Link as={Link} to={'/guidelines'}>Guidelines</Nav.Link>
-                        <Nav.Link as={Link} to={'/about'}>About</Nav.Link>
-                        {/*<NavDropdown title="Dropdown" id="collasible-nav-dropdown">*/}
-                        {/*    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>*/}
-                        {/*    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>*/}
-                        {/*    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>*/}
-                        {/*    <NavDropdown.Divider />*/}
-                        {/*    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>*/}
-                        {/*</NavDropdown>*/}
+                        <Nav.Link as={Link} to={'/guidelines'} onClick={this.toggleNavBar}>Guidelines</Nav.Link>
+                        <Nav.Link as={Link} to={'/about'} onClick={this.toggleNavBar}>About</Nav.Link>
                     </Nav>
                     <Nav>
                         {
                             this.props.loggedIn ?
-                                ( <Nav.Link as={Link} to={'/account'}>ACCOUNT</Nav.Link> ) :
-                                ( <Nav.Link as={Link} to={'/login'}>LOGIN</Nav.Link> )
+                                ( <Nav.Link as={Link} to={'/account'} onClick={this.toggleNavBar}>ACCOUNT</Nav.Link> ) :
+                                ( <Nav.Link as={Link} to={'/login'} onClick={this.toggleNavBar}>LOGIN</Nav.Link> )
                         }
-                        {/*<Nav.Link as={Link} to={'/account'}>ACCOUNT</Nav.Link>*/}
-                        {/*<Nav.Link as={Link} to={'/login'}>LOGIN</Nav.Link>*/}
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

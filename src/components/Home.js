@@ -27,12 +27,12 @@ class Home extends Component{
                     <p className={'text-center mb-0'}>Bicol University Gubat Campus</p>
                     <h3 className={'text-center'}><b>E</b> - LIBRARY</h3>
                     <Row>
-                        <Col className={'text-center mt-5'}>
+                        <Col className={'text-center mt-3'}>
                             <Button as={Link} to={'/book/search'} variant={"outline-secondary"} className={'center-text'} size={'lg'}><FaSearch/>  SEARCH BOOKS</Button>
                         </Col>
                     </Row>
-                    <Row className={"justify-content-md-center"} style={{marginTop: '3vh'}}>
-                        <Col lg={6} sm={12}>
+                    <Row className={"justify-content-md-center"}>
+                        <Col lg={6} sm={12} style={{marginTop: '3vh'}}>
                             <Card>
                                 <Card.Img variant={"top"} src={"https://piedmontlifestyle.com/wp-content/uploads/2019/02/WEB-bigstock-Woman-Holding-Book-For-Giving-228580477-678x381.jpg"}/>
                                 <Card.Body>
@@ -51,7 +51,7 @@ class Home extends Component{
                                 </Card.Body>
                             </Card>
                         </Col>
-                        <Col lg={6} sm={12}>
+                        <Col lg={6} sm={12} style={{marginTop: '3vh'}}>
                             <Card>
                                 <Card.Img variant={"top"} src={"https://ichef.bbci.co.uk/news/976/cpsprodpb/B469/production/_114358164_screenshot2020-09-13145026.png"}/>
                                 <Card.Body>

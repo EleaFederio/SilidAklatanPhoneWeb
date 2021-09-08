@@ -1,5 +1,5 @@
 import {Component} from "react";
-import {Button, Card, Col, Container, Form, FormControl, FormGroup, Image, Row} from "react-bootstrap";
+import {Alert, Button, Card, Col, Container, Form, FormControl, FormGroup, Image, Row} from "react-bootstrap";
 import BugcLogo from '../images/bugcTransparentLogo.png';
 import {axios} from "../lib/axios";
 import cookie from 'js-cookie';
@@ -13,7 +13,7 @@ class LoginPage extends Component{
         this.state = {
             studentId: 'sss',
             password: '',
-            errors: {}
+            errors: ''
         }
     }
 
@@ -44,7 +44,12 @@ class LoginPage extends Component{
                     this.props.history.push('/account');
                 })
                 .catch(error => {
-                    console.log(error)
+                    this.setState({
+                        studentId: '',
+                        password: '',
+                        errors:  error.response.data.message[0]
+                    });
+                    // console.log();
                 });
         })
     }
@@ -56,6 +61,12 @@ class LoginPage extends Component{
         this.setState({
             [name]: value
         })
+    }
+
+    errorAlert(error){
+        return <Container>
+            <Alert variant={'danger'}>{error}</Alert>
+        </Container>
     }
 
     render() {
@@ -76,6 +87,7 @@ class LoginPage extends Component{
                             <p className={'text-center mb-0'}>Bicol University Gubat Campus</p>
                             <p className={'text-center mb-1'}><b>E - LIBRARY</b></p>
                             <h4 className={'text-center'}><b>Login Here</b></h4>
+                            {this.state.errors !== '' ? this.errorAlert(this.state.errors) : ''}
                             <Card.Body>
                                 <Form onSubmit={this.handleAuthentication}>
                                     <FormGroup>
@@ -85,6 +97,7 @@ class LoginPage extends Component{
                                     <FormGroup>
                                         <label>Password</label>
                                         <FormControl type={'password'} placeholder={'Password here...'} name={'password'} onChange={this.handleInput} />
+                                        {/*<a href={''}>Forgot Password</a>*/}
                                     </FormGroup>
                                     <Button type={'submit'} variant={'primary'} className={'btn-block mt-5'}><b>LOGIN</b></Button>
                                 </Form>
