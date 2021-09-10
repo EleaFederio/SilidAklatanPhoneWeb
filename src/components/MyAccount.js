@@ -28,7 +28,7 @@ class MyAccount extends Component{
             <Fragment>
                 <div className={'container mt-4'}>
                     <div>
-                        <h3>My Profile</h3>
+                        <h3>My Account</h3>
                     </div>
 
                     <div className={'main-body'}>
@@ -72,7 +72,7 @@ class MyAccount extends Component{
                                             <h6 className="mb-0">
                                                 Year:
                                             </h6>
-                                            <span className="text-secondary">bootdey</span>
+                                            <span className="text-secondary">{this.props.student.year}</span>
                                         </li>
                                         <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                                             <h6 className="mb-0">
@@ -92,8 +92,8 @@ class MyAccount extends Component{
                                     <div className={'card-body'}>
                                         <div className={'row'}>
                                             <div className={'col-sm-12'}>
-                                                <h6 className={'mb-0'}>Full Name</h6>
                                                 <Button onClick={this.handleLogout} size={'sm'} variant={'danger'}>LOGOUT</Button>
+
                                             </div>
                                         </div>
                                     </div>

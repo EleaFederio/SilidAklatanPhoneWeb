@@ -4,11 +4,9 @@
     <list default="true" id="c30eddb1-2c09-4495-8780-8216c7d9e1ac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/auth/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth/LoginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AboutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BookList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/GuidelinesPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GuidelinesPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MyAccount.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyAccount.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/partial_components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/partial_components/Header.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,6 +101,7 @@
       <workItem from="1611985335462" duration="4251000" />
       <workItem from="1625705791464" duration="1312000" />
       <workItem from="1631102234438" duration="12355000" />
+      <workItem from="1631284767595" duration="3251000" />
     </task>
     <servers />
   </component>

@@ -32,9 +32,11 @@ class Header extends Component{
                                 (
                                     <>
                                         {/*<Nav.Link as={Link} to={'/qr_scanner'}>QR Login</Nav.Link>*/}
-                                        <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                                            <NavDropdown.Item href="#action/3.1">Request a Book</NavDropdown.Item>
-                                            <NavDropdown.Item href="#action/3.2">Library Evaluation</NavDropdown.Item>
+                                        <NavDropdown title="Services" id="collasible-nav-dropdown">
+                                            <NavDropdown.Item href="#1">On-Site Reservation</NavDropdown.Item>
+                                            <NavDropdown.Item href="#2">E-Book Collection</NavDropdown.Item>
+                                            <NavDropdown.Item href="#3">Book Scanning</NavDropdown.Item>
+                                            <NavDropdown.Item href="https://infotrac.galegroup.com/itweb/phbicol">Academic One-File</NavDropdown.Item>
                                         </NavDropdown>
                                     </>
                                 ) :
